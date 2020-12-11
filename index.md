@@ -1,37 +1,92 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/shantun7792/SmallPlayToolForKids/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shantun7792/SmallPlayToolForKids/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<html>
+    <head>
+        <link rel="stylesheet" href="bsls-ui.css">
+        <script src="bsls-presentation.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+    <body>
+        
+        <div class="container-fluid">
+             <div class="row">
+               <div class="col-md-12">
+                   <img src="BSLS.gif"/>
+               </div>
+            </div>
+            
+            <div class="row">
+               <div class="col-md-12">
+                   <h2>Learning Tool (ver 1)</h2>
+               </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-md-6">
+                    No. of Cols : 
+                    <input type="number" class="form-control" min="1" max="100" name="cols" id="cols" required value="3"/>
+                </div>
+                <div class="form-group col-md-6">
+                    No. of Rows : 
+                    <input type="number" class="form-control" min="1" max="100" name="rows" id="rows" required value="3"/>
+                </div>
+                
+                <div class="form-group col-md-6">
+                    Sample Cell Data :
+                    <input type="text" class="form-control" name="data" required id="data"/>
+                </div>
+                <div class="form-group col-md-6">   
+                    Cell Height (in pixels, Min height:40px)
+                    <input type="number" class="form-control" min="1" max="50" name="height" required id="height" value="10"/>
+                </div>
+                
+                <div class="form-group col-md-6">   
+                    Cell width (in pixels, Min width:40px)
+                    <input type="number" class="form-control" min="1" max="50" name="width" required id="width" value="10"/>
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <label for="sel1">Select Color:</label>
+                  <select class="form-control" id="color">
+                    <option value="black">Black</option>
+                    <option  value="white" selected>White</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option  value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option  value="cyan">Cyan</option>
+                    <option value="pink">Pink</option>
+                    <option value="orange">Orange</option>
+                    
+                    
+                  </select>
+                </div>
+                
+                <div class="form-group col-md-6">   
+                    Count Down Timer
+                    <input type="number" class="form-control"  name="timer" required id="timer" value="10"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <button class="btn btn-primary" onclick="clock();">Start counter</button>
+                    <button class="btn btn-primary" onclick="clearInterval(myTimer);">Stop counter</button>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" onclick="generate()">Generate Table</button>
+                    <button type="button" class="btn btn-danger" onclick="clearDom()">Clear Table</button>    
+                </div>
+                
+            </div>
+            
+            <div class="row">
+               <div class="form-group col-md-12" id="appData">
+                    <!--<table class="" id="table">
+                        <tbody id="body">
+                        </tbody>
+                    </table>-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
