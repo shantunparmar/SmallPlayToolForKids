@@ -1,0 +1,38 @@
+p.error {
+	color:red;
+}
+
+/*.table.mt-2{
+    margin-top: 20px !important;
+}
+
+.table>tbody>tr>td,
+.table-bordered>tbody>tr>td{
+    vertical-align: middle !important;
+}
+
+table {
+  border-collapse: collapse;
+}*/
+body {
+    background: #f3f2f1;
+}
+img {
+    float: center;
+    margin-left: 39%;
+    margin-top: 3%;
+    height: 25%;
+    width: 14%;
+}
+table, td {
+  border: 1px solid black;
+}
+
+table{
+    border-spacing: 1px !important;
+    border-collapse: separate !important;
+}
+
+table#table{
+        margin-top: 20px;
+}
